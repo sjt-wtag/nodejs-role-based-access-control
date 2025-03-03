@@ -3,7 +3,7 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
-app.use(express.json());
+app.use(express.json());// helps to get json data
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
