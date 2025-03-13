@@ -1,25 +1,29 @@
 {
   "name": "nodejs-rbac",
   "version": "1.0.0",
+  "description": "# Auth",
   "type": "module",
-  "main": "index.js",
+  "main": "db.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjt-wtag/nodejs-role-based-access-control.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/sjt-wtag/nodejs-role-based-access-control/issues"
+  },
+  "homepage": "https://github.com/sjt-wtag/nodejs-role-based-access-control#readme",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.13.3"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.0"
   }
 }

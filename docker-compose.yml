@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PG_HOST=db
+      - PG_USER=postgres
+      - PG_PORT=5432
+      - PG_DATABASE=rbacDB
+      - PG_PASSWORD=sql
+      - SECRET_KEY=fhnfjknghjkf
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sql
+      POSTGRES_DB: rbacDB
+    ports:
+      - "5432:5433" 
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
